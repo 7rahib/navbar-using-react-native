@@ -136,10 +136,12 @@ const styles = StyleSheet.create({
     calculationText: {
         fontSize: 24,
         color: 'white',
+        padding: 7
     },
     resultText: {
         fontSize: 30,
         color: 'white',
+        padding: 7
     },
     result: {
         flex: 2,
