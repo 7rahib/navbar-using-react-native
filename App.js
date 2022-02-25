@@ -1,31 +1,14 @@
 
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import Home from './components/Home'
-import SecondScreen from './components/SecondScreen'
-import { createDrawerNavigator } from '@react-navigation/drawer'
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
 
+import DrawerNavigator from "./navigation/DrawerNavigator";
 
-const Drawer = createDrawerNavigator()
-
-export default function App() {
+const App = () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator intialRouteName="Home">
-        <Drawer.Screen name="Home" component={Home} />
-        <Drawer.Screen name="SecondScreen" component={SecondScreen} />
-      </Drawer.Navigator>
+      <DrawerNavigator />
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
